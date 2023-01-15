@@ -49,13 +49,13 @@ app.post('/chatbot', (req, res) => {
 	}
 });
 
-function getNumberInfo(number){
-	const API_URL = `http://numbersapi.com/${number}`;
-	fetch(API_URL).then(response => response.text()).then(data => {
-		console.log(data);
-	}).catch(error => {
-		console.log(error);
-	});
-}
+// function getNumberInfo(number){
+// 	const API_URL = `http://numbersapi.com/${number}`;
+// 	fetch(API_URL).then(response => response.text()).then(data => {
+// 		console.log(data);
+// 	}).catch(error => {
+// 		console.log(error);
+// 	});
+// }
 
-getNumberInfo(42, 'trivia');
+// getNumberInfo(42, 'trivia');
