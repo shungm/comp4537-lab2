@@ -16,7 +16,7 @@ app.get('*', function(req, res) {
 	res.redirect('/chatbot');
 })
 
-app.get('/chatbot', function(req, res) {
+app.get('/', function(req, res) {
 	res.sendFile(__dirname + "/public/html/index.html");
 });
 
