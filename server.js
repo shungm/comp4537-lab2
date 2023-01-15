@@ -29,6 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //Handles incoming requests
 app.post('/chatbot', (req, res) => {
+	res.header("Access-Control-Allow-Origin", "*");
 	const message = req.body.message;
 	const number = message.match(/\d+/);
 	if (number) {
