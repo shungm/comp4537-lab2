@@ -12,16 +12,17 @@ app.listen(PORT, () => {
 })
 
 //Ask Nabil about why this redirection isn't working
-app.get('*', function(req, res) {
-	res.redirect('/chatbot');
-})
+// app.get('*', function(req, res) {
+// 	res.redirect('/chatbot');
+// })
 
-app.get('/', function(req, res) {
-	res.sendFile(__dirname + "/public/html/index.html");
-});
+// app.get('/', function(req, res) {
+// 	res.sendFile(__dirname + "/public/html/index.html");
+// });
 
 // Tell express module public directory has site assets
-app.use(express.static(path.join(__dirname, '/public')));
+//app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static('public'));
 
 //Reads JSON body
 app.use(express.json());
